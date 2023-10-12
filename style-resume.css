@@ -1,3 +1,6 @@
+html{
+	scroll-behavior: smooth;
+}
 body{
 	margin: 0px;
 }
@@ -24,7 +27,8 @@ body{
 	display: inline-block;
 	margin: 0px 14px 14px 0px;
     font-weight: 100;
-    font-size: 3vh;
+    font-size: 1.1em;
+    min
 }
 .horizontal-list li a{
 	color: white;
@@ -202,7 +206,27 @@ body{
 	margin-left: -10px;
 	z-index: 2;
 }
-
+@media screen and (max-width: 600px){
+	.timeline-divider{
+	left: 5%;
+}
+.timeline-box{
+	left: 9% !important;
+	width: 80%;
+}
+.timeline-box::after{
+	left: -8.67% !important;
+}
+/*.timeline-box:nth-child(2n+1)::after{
+	left: -8.67%;
+}
+.timeline-box:nth-child(2n)::after{
+	left: -8.67%;
+}*/
+/*.timeline-box:nth-child(2n){
+	left: 9%;
+}*/
+}
 
 /* Portfolio section*/
 .parent-portfolio{
@@ -217,31 +241,46 @@ body{
 	border: 2px solid black;
 }
 .image-portfolio{
-	max width: 200px;
+	min-width: 150px;
 	margin: 5px;
 	position: relative;
 	border: 2px solid black;
     overflow: hidden;
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
     box-shadow: inset 1px 1px 2px 1px #b9b9b9;
     width: 20rem;
     height: 20rem;
-    min-height: 200px;
+    min-height: 150px;
 }
 .image-portfolio img{
 	width: 100%;
 	height: 100%;
 }
-.image-portfolio:hover{
+.image-portfolio img:hover{
 	background-color: #EDEEF1;
 	box-shadow: inset 1px 1px 2px 1px #b9b9b9;
 	z-index: 5;
 }
 .image-portfolio img:hover{
+	background-color: #EDEEF1;
 	max-width: 100%;
 	transition: transform 2s;
 }
 .image-portfolio:hover img{
 	transform: scale(1.2);
+}
+.portfolio-overlay{
+	width: 90%;
+	height: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	color: black;
+	border: 2px solid black;
+	margin-top: 5%;
+	z-index: 2;
 }
 /*Contact Section*/
 .contact-parent{
